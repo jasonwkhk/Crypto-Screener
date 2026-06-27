@@ -7,7 +7,7 @@ st.set_page_config(page_title="Crypto Volatility Screener", layout="wide")
 @st.cache_data(ttl=60) # Caches data for 60 seconds
 def get_crypto_data():
     # Connect to Binance's public API (no keys needed)
-    exchange = ccxt.binance()
+    exchange = ccxt.bybit()
     tickers = exchange.fetch_tickers()
     
     data = []
